@@ -25,6 +25,8 @@ export default function SCPDetail() {
       <div className="scp-content">
         <img src={scp.image} alt={`SCP-${scp.number}`} className="scp-image" />
         
+        <img src={scp.level} alt={`level keycard`} className="scp-image" />
+
         <div className="scp-description">
           <h2>Description</h2>
           <p>{scp.description}</p>
@@ -37,22 +39,20 @@ export default function SCPDetail() {
 
         <img src={scp.image2} alt={`SCP-${scp.number}`} className="scp-image" />
 
-         <img src={scp.level} alt={`level keycard`} className="scp-image" />
+        
 
         <div className="scp-addendum">
-          <h3>Addendum-001</h3>
+          <h3></h3>
           <p>{scp.addendum}</p>
         </div>
 
-        <div className="scp-addendum">
-          <h3>Addendum-002</h3>
+        <div className="scp-addendum highlighted">
+          <h3></h3>
           <p>{scp.addendum2}</p>
         </div>
 
-       
-
         <div className="scp-addendum">
-          <h3>Addendum-003</h3>
+          <h3></h3>
           <p>{scp.addendum3}</p>
         </div>
 
