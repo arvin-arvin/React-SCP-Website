@@ -1,0 +1,244 @@
+.landing {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #e0e0e0;
+}
+
+.landing-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.landing-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 20px rgba(0, 191, 255, 0.3));
+  animation: logo-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes logo-glow {
+  0% { filter: drop-shadow(0 0 20px rgba(0, 191, 255, 0.3)); }
+  100% { filter: drop-shadow(0 0 30px rgba(0, 191, 255, 0.6)); }
+}
+
+.landing-header h1 {
+  font-size: 4rem;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+}
+
+.landing-description {
+  font-size: 1.3rem;
+  color: #ff0000;
+  margin-top: 0.5rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.scp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.scp-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.scp-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff0000;
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.2);
+}
+
+.card-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.scp-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-number {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ff0000;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 2px solid #ff0000;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #00bfff;
+  letter-spacing: 1px;
+}
+
+.card-content h4 {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1.1rem;
+  color: #aaa;
+  font-weight: 400;
+}
+
+.card-class {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.card-class.class-euclid {
+  background-color: #ff6b35;
+  color: #fff;
+}
+
+.card-class.class-safe {
+  background-color: #0d9f0d;
+  color: #fff;
+}
+
+.card-title.class-euclid{
+  color: #ff6b35;
+}
+
+.card-title.class-safe{
+  color: #0d9f0d;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .landing {
+    padding: 1.5rem;
+  }
+
+  .scp-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .landing {
+    padding: 1rem;
+  }
+
+  .landing-header {
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+  }
+
+  .landing-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .landing-header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .landing-description {
+    font-size: 1rem;
+  }
+
+  .scp-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card-image-container {
+    height: 200px;
+  }
+
+  .card-number {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-class {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .card-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing {
+    padding: 0.75rem;
+  }
+
+  .landing-header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .landing-description {
+    font-size: 0.9rem;
+  }
+
+  .scp-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .card-image-container {
+    height: 180px;
+  }
+}
